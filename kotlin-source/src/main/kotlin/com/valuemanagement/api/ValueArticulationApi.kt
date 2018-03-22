@@ -836,7 +836,7 @@ class ValueArticulationApi(private val rpcOps: CordaRPCOps) {
 
 
                 AUVStates[j].valueContractTransactionVO = VCTStates as ArrayList<ValueContractTransactionVO>;
-
+                println("asnfkna")
 
 
             }
