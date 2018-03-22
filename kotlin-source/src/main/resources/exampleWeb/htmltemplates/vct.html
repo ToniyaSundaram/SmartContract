@@ -1,0 +1,81 @@
+<div class="container-fluid bg-2 text-center" ng-controller="VCTController">
+    <div class="row">
+        <div class="col-sm-4" >
+            <div class="image">
+                <!--<h3> {{senderRole}}</h3>-->
+                <h3>  </h3>
+                <br>
+                <img ng-src="{{leftimageUrl}}" alt="Image" class="img-circle" width="250" height="250" >
+                <h3> {{senderRole}}</h3>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <p> <div>
+
+            <div class="col-md-12" data-tip="LOB">
+        <input type="text" class="form-control" id="text" placeholder="Enter Line of Business" name="lob" ng-model="lob">
+    </div>
+    <div class="col-md-12" data-tip="Lever Category" ng-show="hidecustomer">
+        <input type="text" class="form-control" id="text" placeholder="Enter the Lever Category" name="leverCategory" ng-model="leverCategory">
+    </div>
+    <div class="col-md-12" data-tip="value program" >
+        <input type="text" class="form-control" id="text" placeholder="Enter value Improvement Program" name="valueImprovementProgram" ng-model="valueImprovementProgram">
+    </div>
+    <div class="col-md-12" data-tip="value category" ng-show="hidecustomer">
+        <input type="text" class="form-control" id="text" placeholder="Enter value Category" name="valueCategory" ng-model="valueCategory">
+    </div>
+    <div class="col-md-12" data-tip="Theme" ng-show="hidecustomer">
+        <input type="text" class="form-control" id="text" placeholder="Enter theme" name="theme" ng-model="theme" >
+    </div>
+    <div class="col-md-12" data-tip="value description">
+        <input type="text" class="form-control" id="text" placeholder="Enter value Add Description" name="valueAddDescription" ng-model="valueAddDescription">
+    </div>
+    <div class="col-md-12" data-tip="Service Credits">
+        <input type="text" class="form-control" id="text" placeholder="Enter Service Credits" name="agreedServiceCredits" ng-model="agreedServiceCredits" >
+    </div>
+    <div class="col-md-12" data-tip="Implementation Date">
+        <input type="date" class="form-control" id="text" placeholder="Enter implementation Year" name="implementationDate" ng-model="implementationDate" datepicker-options="dateOptions">
+    </div>
+    <div class="col-md-12" data-tip="Comments" ng-show="hidecustomer">
+        <input type="text" class="form-control" id="text" placeholder="Enter Internal Comments" name="internalComments" ng-model="internalComments">
+    </div>
+    <div class="col-md-12" ng-show = "customerCommentsVisible" data-tip="comments">
+        <input type="text" class="form-control" id="text" placeholder="Enter Customer Comments" name="customerComments" ng-model="customerComments">
+    </div>
+    <div class="col-md-12" ng-show = "submitVisible">
+        <input type="submit" value="Execute VCT" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="executevct()">
+    </div>
+    <div class="col-md-12" ng-show = "authorizeVisible">
+        <input type="submit" value="Authorize VCT" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="authorizevct()">
+    </div>
+    <div class="col-md-12" ng-show = "approveVisible ">
+        <input type="submit" value="Approve VCT" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="approvevct()">
+    </div>
+    <div class="col-md-12" ng-show = "reviseVisible ">
+        <input type="submit" value="Revise VCT" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="revisevct()">
+    </div>
+
+    <div class="col-md-12" ng-show = "vctVisible">
+        <input type="submit" value="Create New VCT" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="createvct()">
+    </div>
+</div></p>
+</div>
+        <div class="col-sm-4">
+            <div class="image">
+                <img ng-src="{{rightimageUrl}}" alt="Image" class="img-circle" width="100" height="100" >
+                <h3> {{receiverRole}}</h3>
+            </div>
+            <div class="image" ng-show="imageShow">
+                <img ng-src="{{rightimageUrl1}}" alt="Image" class="img-circle" width="100" height="100" >
+                <h3> {{receiverRole1}}</h3>
+            </div>
+            <div class="text-center bg-grey" >
+                <h3 style="color:#2874A6 ;"> Notification !!!            <a style="color:#FFFFFF;" href="#">
+                    <span class="glyphicon glyphicon-pushpin"></span>
+                </a></br></h3>
+                <span> <marquee><h4 > Only {{senderRole}} is authorized for this action </br> </h4> </marquee></span>
+                <span> <h4  ng-show="showmessage">  {{message}} </h4> </span>
+            </div>
+        </div>
+</div>
+</div>

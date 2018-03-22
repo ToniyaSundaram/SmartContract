@@ -1,0 +1,89 @@
+
+<div class="container-fluid bg-2 text-center" ng-controller="MainController">
+    <div class="row">
+        <div class="col-sm-4" >
+            <div class="image">
+            <h3>  </h3>
+                <br>
+           <img ng-src="{{leftimageUrl}}" alt="Image" class="img-circle" width="250" height="250" >
+                <h3> {{senderRole}}</h3>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <p> <div>
+            <div class="col-md-12" data-tip="Business unit">
+                <input type="text" class="form-control" id="text" placeholder="Enter Business Unit" name="businessUnit" ng-model="businessUnit">
+            </div>
+            <div class="col-md-12" data-tip="account name">
+                <input type="text" class="form-control" id="text" placeholder="Enter Account name" name="accountName" ng-model="accountName" >
+            </div>
+            <div class="col-md-12" data-tip="Project Name">
+                <input type="text" class="form-control" id="text" placeholder="Enter Project name" name="projectName" ng-model="projectName" >
+            </div>
+            <!--<div class="col-md-12" data-tip="Project Type" >
+                <input type="text" class="form-control" id="text" placeholder="Enter Project Type" name="projectType" ng-modeltest="projectType" >
+            </div>-->
+            <div class="col-md-12" data-tip="customer name">
+                <input type="text" class="form-control" id="text" placeholder="Enter Customer Name" name="customerName" ng-model="customerName" >
+            </div>
+            <div class="col-md-12" data-tip="LOB">
+                <input type="text" class="form-control" id="text" placeholder="Enter LOB" name="lob" ng-model="lob" required placeholder="Enter lob">
+            </div>
+            <div class="col-md-12" data-tip="comments">
+                <input type="text" class="form-control" id="text" placeholder="Enter internal Comments" name="internalComments" ng-model="internalComments">
+            </div>
+            <div class="col-md-12" data-tip="customerComments" ng-show="customerCommentsVisible">
+                <input type="text" class="form-control" id="text" placeholder="Enter Customer Comments" name="customerComments" ng-model="customerComments">
+            </div>
+            <div class="col-md-12" data-tip="Start Date">
+                <input type="date" class="form-control" id="text" placeholder="Enter Start Year" name="startYear" ng-model="startYear" min="2000-01-01">
+            </div>
+            <div class="col-md-12" data-tip="End Date">
+                <input type="date" class="form-control" id="text" placeholder="Enter End Year" name="endYear" ng-model="endYear" datepicker-options="dateOptions">
+            </div>
+            <div class="col-md-12" data-tip="Service Credit">
+                <input type="text" class="form-control" id="text" placeholder="Enter Service Credit" name="serviceCredit" ng-model="serviceCredit" required placeholder="Enter Service Credits">
+            </div>
+            <div class="col-md-12" ng-show = "submitVisible">
+                <input type="submit" value="Submit" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="submit()">
+            </div>
+            <div class="col-md-12" ng-show = "authorizeVisible">
+                <input type="submit" value="authorize" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="authorize()">
+            </div>
+            <form name="CreateAUV"  ng-submit="createVct()">
+                <div class="col-md-12" ng-show = "approveVisible">
+                    <input type="submit" value="approve" ng-model="details" class="btn btn-default btn-lg" id="button" ng-click="approve()">
+                </div>
+            </form>
+            <div class="col-md-12" ng-show = "vctVisible" style="font-family: 'Georgia';color: #1C2833;">
+                <h4>Click the below button to Create a Vaule add for this Agreed upon Value</h4>
+                <!-- <input type="submit" value="Create vct" ng-modeltest="details" class="btn btn-default btn-lg" id="button" ng-click="createvct()">-->
+               <!-- <a ui-sref="vct">Create VCT</a>-->
+                <a ui-sref="vct">
+                    <button class="btn btn-default btn-lg" >Create VCT</button>
+                </a>
+            </div>
+        </div></p>
+
+    </div>
+        <div class="col-sm-4">
+            <div class="image">
+                <img ng-src="{{rightimageUrl}}" alt="Image" class="img-circle" width="100" height="100" >
+                <h3> {{receiverRole}}</h3>
+            </div>
+            <div class="image" ng-show="imageShow">
+                <img ng-src="{{rightimageUrl1}}" alt="Image" class="img-circle" width="100" height="100" >
+                <h3> {{receiverRole1}}</h3>
+            </div>
+
+            <div class="text-center bg-grey" >
+                <h3 style="color:#2874A6 ;"> Notification !!!            <a style="color:#FFFFFF;" href="#">
+                    <span class="glyphicon glyphicon-pushpin"></span>
+                </a></br></h3>
+                <span> <marquee><h4 > Only {{senderRole}} is authorized for this action </br> </h4> </marquee></span>
+                <span> <h4  ng-show="showmessage">  {{message}} </h4> </span>
+
+            </div>
+        </div>
+    </div>
+</div>

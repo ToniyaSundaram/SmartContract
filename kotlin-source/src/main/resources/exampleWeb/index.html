@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Value Articulation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
+  <script src="http://code.angularjs.org/1.2.13/angular-animate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+  <script src="js/index.js"></script>
+<!--  <link rel="stylesheet"  href="/css/style.css">-->
+    
+  <style>
+   .bg-1 {
+      background-color: #3CB371;
+      color: #ffffff;
+  }
+   .bg-2 {
+     background-color: #3CB371;
+     background-image: url("image/roadmap.png");
+     color: #1C2833;
+     padding-bottom: 17px;
+     background-position: center;
+     font-family: "Georgia";
+     background-image:center;
+   }
+  .bg-3 { 
+      background-color: #ffffff;
+      color: #512E27;
+  }
+  .container-fluid {
+      padding-top: 21px;
+      padding-bottom: 27px;
+  }
+  .col-md-12{
+    padding-bottom: 10px;
+  }
+  #text{
+   margin-left:50px;
+   width :82%;
+  }
+  #text1{
+   margin-left:50px;
+   width :12%;
+  }
+  .image {
+    padding-top: 25px;
+ }
+  [data-tip] {
+  position: relative;
+
+}
+
+[data-tip] {
+  position: relative;
+
+}
+
+[data-tip]:before {
+  content: '';
+  /* hides the tooltip when not hovered */
+  display: none;
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #1a1a1a;
+  position: absolute;
+  top: 30px;
+  left: 150px;
+  right: 200px;
+  z-index: 8;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+[data-tip]:after {
+  display: none;
+  content: attr(data-tip);
+  position: absolute;
+  top: -20px;
+  left:360px;
+  padding: 5px 10px;
+  background: #3E6868;
+  color: #fff;
+  z-index: 15;
+  font-size: 1.05em;
+  height: 30px;
+  line-height: 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+
+[data-tip]:hover:after {
+  display: block;
+
+
+}
+   .bg-grey {
+     background-color:#3CB371;
+     height: 200px;
+     color: #FFFFFF;
+     font-size: 19px;
+     line-height: 1.375em;
+     font-weight: 400;
+     font-style: bold;
+     margin: 70px 0;
+     border: 14px solid #AF601A ;
+   }
+   .carousel-control.right, .carousel-control.left {
+     background-image: none;
+     color: green;
+  }
+  .carousel-indicators li {
+        border-color: green;
+  }
+  .carousel-indicators li.active {
+      background-color: green;
+  }
+  .item h4 {
+      color: #0A0A0B;
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: bold;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+
+  </style>
+</head>
+<body>
+<div class="container-fluid bg-1 text-center">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="image/cts.jpg" class="img-circle" alt="Cognizant" width="100" height="100">
+    </div>
+    <div class="col-sm-4">
+      <h1>We Promise Values</h1>
+      <!--  <img src="image/Our_Client.jpg" class="img-circle" alt="Client" width="150" height="150">-->
+    </div>
+    <div class="col-sm-4">
+      <img src="image/hand.png" class="img-circle" alt="Client" width="100" height="100">
+    </div>
+  </div>
+</div>
+<ui-view></ui-view>
+</body>
+</html>
